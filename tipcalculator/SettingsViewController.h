@@ -13,4 +13,6 @@
 // Key for storing the index of the default tip in NSUserDefaults.
 extern NSString *const DEFAULT_TIP_INDEX;
 
++ (void)setDefaultSelectedIndex:(UISegmentedControl *)tipSegmentedControl;
+
 @end

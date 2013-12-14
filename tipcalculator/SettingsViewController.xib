@@ -6,6 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SettingsViewController">
             <connections>
+                <outlet property="defaultTipSegmentedControl" destination="7ed-Dc-fvs" id="3dW-fq-yne"/>
                 <outlet property="view" destination="1" id="3"/>
             </connections>
         </placeholder>

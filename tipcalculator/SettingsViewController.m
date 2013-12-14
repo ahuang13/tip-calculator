@@ -10,7 +10,10 @@
 
 @interface SettingsViewController ()
 
+@property (weak, nonatomic) IBOutlet UISegmentedControl *defaultTipSegmentedControl;
+
 - (IBAction)onDefaultTipChanged:(UISegmentedControl *)sender;
+
 @end
 
 @implementation SettingsViewController
@@ -29,6 +32,8 @@ NSString *const DEFAULT_TIP_INDEX = @"defaultTipIndex";
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+
+    [SettingsViewController setDefaultSelectedIndex:self.defaultTipSegmentedControl];
 }
 
 - (void)didReceiveMemoryWarning
@@ -41,6 +46,16 @@ NSString *const DEFAULT_TIP_INDEX = @"defaultTipIndex";
     // Immediately store the index of the newly selected default tip in NSUserDefaults.
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults setInteger:sender.selectedSegmentIndex forKey:DEFAULT_TIP_INDEX];
+}
+
++ (void)setDefaultSelectedIndex:(UISegmentedControl *)tipSegmentedControl
+{
+    // Retrieve the default tip percentage from NSUserDefaults.
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    int defaultIndex = [defaults integerForKey:DEFAULT_TIP_INDEX];
+    
+    // Set the tip SegmentedControl to the default tip.
+    tipSegmentedControl.selectedSegmentIndex = defaultIndex;
 }
 
 @end
