@@ -17,6 +17,7 @@
 
 - (IBAction)onTap:(id)sender;
 - (void)updateValues;
+- (void)onSettingsButton;
 
 @end
 
@@ -34,6 +35,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    // Add "Settings" button to the right side of the title bar.
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Settings" style:UIBarButtonItemStylePlain target:self action:@selector(onSettingsButton)];
+
     [self updateValues];
 }
 
@@ -58,6 +63,10 @@
     
     self.tipLabel.text = [NSString stringWithFormat:@"$%0.2f", tipAmount];
     self.totalLabel.text = [NSString stringWithFormat:@"$%0.2f", totalAmount];
+}
+
+- (void)onSettingsButton {
+    // TODO
 }
 
 @end
