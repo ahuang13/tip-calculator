@@ -43,6 +43,16 @@
     [self updateValues];
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    // Retrieve the default tip percentage from NSUserDefaults.
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    int defaultIndex = [defaults integerForKey:DEFAULT_TIP_INDEX];
+    
+    // Set the tip SegmentedControl to the default tip.
+    self.tipControl.selectedSegmentIndex = defaultIndex;
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

@@ -10,9 +10,12 @@
 
 @interface SettingsViewController ()
 
+- (IBAction)onDefaultTipChanged:(UISegmentedControl *)sender;
 @end
 
 @implementation SettingsViewController
+
+NSString *const DEFAULT_TIP_INDEX = @"defaultTipIndex";
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -26,13 +29,18 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)onDefaultTipChanged:(UISegmentedControl *)sender
+{
+    // Immediately store the index of the newly selected default tip in NSUserDefaults.
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setInteger:sender.selectedSegmentIndex forKey:DEFAULT_TIP_INDEX];
 }
 
 @end

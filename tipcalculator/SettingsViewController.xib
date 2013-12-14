@@ -29,6 +29,9 @@
                         <segment title="20%"/>
                         <segment title="25%"/>
                     </segments>
+                    <connections>
+                        <action selector="onDefaultTipChanged:" destination="-1" eventType="valueChanged" id="KhJ-Wr-aYE"/>
+                    </connections>
                 </segmentedControl>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The tip percentage that is initially set for each tip calculation." lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="6fb-GD-9wg">
                     <rect key="frame" x="20" y="107" width="280" height="39"/>

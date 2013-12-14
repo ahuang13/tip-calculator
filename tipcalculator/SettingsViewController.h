@@ -10,4 +10,7 @@
 
 @interface SettingsViewController : UIViewController
 
+// Key for storing the index of the default tip in NSUserDefaults.
+extern NSString *const DEFAULT_TIP_INDEX;
+
 @end
