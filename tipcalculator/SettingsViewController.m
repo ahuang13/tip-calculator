@@ -33,6 +33,7 @@ NSString *const DEFAULT_TIP_INDEX = @"defaultTipIndex";
 {
     [super viewDidLoad];
 
+    // Initialize the SegmentedControl with the default tip percentage.
     [SettingsViewController setDefaultSelectedIndex:self.defaultTipSegmentedControl];
 }
 
