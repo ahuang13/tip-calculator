@@ -23,7 +23,7 @@
                   symbolName = "-[SettingsViewController defaultTipSegmentedControl]"
                   moduleName = "tipcalculator"
                   urlString = "file:///Users/angus/CodePath/TipCalculator/tipcalculator/tipcalculator/SettingsViewController.m"
-                  timestampString = "408739369.286453"
+                  timestampString = "408739953.675347"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "13"
@@ -37,7 +37,7 @@
                   symbolName = "-[SettingsViewController setDefaultTipSegmentedControl:]"
                   moduleName = "tipcalculator"
                   urlString = "file:///Users/angus/CodePath/TipCalculator/tipcalculator/tipcalculator/SettingsViewController.m"
-                  timestampString = "408739369.28678"
+                  timestampString = "408739953.675647"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "13"
@@ -45,6 +45,38 @@
                   offsetFromSymbolStart = "31">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "tipcalculator/TipViewController.m"
+            timestampString = "408739860.648668"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "-viewWillAppear:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "tipcalculator/TipViewController.m"
+            timestampString = "408739941.753414"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "-viewWillAppear:"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

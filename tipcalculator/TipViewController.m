@@ -45,8 +45,11 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    // Initialize the SegmentedControl with the default tip percentage.
-    [SettingsViewController setDefaultSelectedIndex:self.tipControl];
+    // Initialize the SegmentedControl with the default tip percentage only if
+    // the amount text field is not already filled in.
+    if ([self.billTextField.text isEqualToString:@""]) {
+        [SettingsViewController setDefaultSelectedIndex:self.tipControl];
+    }
 }
 
 - (void)didReceiveMemoryWarning
