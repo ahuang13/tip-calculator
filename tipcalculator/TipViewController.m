@@ -7,6 +7,7 @@
 //
 
 #import "TipViewController.h"
+#import "SettingsViewController.h"
 
 @interface TipViewController ()
 
@@ -66,7 +67,7 @@
 }
 
 - (void)onSettingsButton {
-    // TODO
+    [self.navigationController pushViewController:[[SettingsViewController alloc] init] animated:YES];
 }
 
 @end
