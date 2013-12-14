@@ -18,7 +18,15 @@
 
 @implementation SettingsViewController
 
+//==============================================================================
+#pragma mark - Public Constants
+//==============================================================================
+
 NSString *const DEFAULT_TIP_INDEX = @"defaultTipIndex";
+
+//==============================================================================
+#pragma mark - Initializers
+//==============================================================================
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -29,6 +37,10 @@ NSString *const DEFAULT_TIP_INDEX = @"defaultTipIndex";
     return self;
 }
 
+//==============================================================================
+#pragma mark - View Lifecycle Methods
+//==============================================================================
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -37,10 +49,9 @@ NSString *const DEFAULT_TIP_INDEX = @"defaultTipIndex";
     [SettingsViewController setDefaultSelectedIndex:self.defaultTipSegmentedControl];
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-}
+//==============================================================================
+#pragma mark - IBAction Methods
+//==============================================================================
 
 - (IBAction)onDefaultTipChanged:(UISegmentedControl *)sender
 {
@@ -48,6 +59,10 @@ NSString *const DEFAULT_TIP_INDEX = @"defaultTipIndex";
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults setInteger:sender.selectedSegmentIndex forKey:DEFAULT_TIP_INDEX];
 }
+
+//==============================================================================
+#pragma mark - Public Methods
+//==============================================================================
 
 + (void)setDefaultSelectedIndex:(UISegmentedControl *)tipSegmentedControl
 {

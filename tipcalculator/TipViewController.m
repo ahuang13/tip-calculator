@@ -17,12 +17,17 @@
 @property (weak, nonatomic) IBOutlet UISegmentedControl *tipControl;
 
 - (IBAction)onTap:(id)sender;
+
 - (void)updateValues;
 - (void)onSettingsButton;
 
 @end
 
 @implementation TipViewController
+
+//==============================================================================
+#pragma mark - Initializers
+//==============================================================================
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -32,6 +37,10 @@
     }
     return self;
 }
+
+//==============================================================================
+#pragma mark - View Lifecycle Methods
+//==============================================================================
 
 - (void)viewDidLoad
 {
@@ -52,16 +61,18 @@
     }
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
+//==============================================================================
+#pragma mark - IBAction Methods
+//==============================================================================
 
 - (IBAction)onTap:(id)sender {
     [self.view endEditing:YES];
     [self updateValues];
 }
+
+//==============================================================================
+#pragma mark - Private Methods
+//==============================================================================
 
 - (void)updateValues {
     
