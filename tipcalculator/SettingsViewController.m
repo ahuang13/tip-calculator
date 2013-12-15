@@ -69,6 +69,7 @@ NSString *const DEFAULT_TIP_INDEX = @"defaultTipIndex";
     // Retrieve the default tip percentage from NSUserDefaults.
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     int defaultIndex = [defaults integerForKey:DEFAULT_TIP_INDEX];
+    [defaults synchronize];
     
     // Set the tip SegmentedControl to the default tip.
     tipSegmentedControl.selectedSegmentIndex = defaultIndex;
